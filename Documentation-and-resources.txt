@@ -1,4 +1,7 @@
 ##
+## 
+## Credits: This page contains links to the work of others. I borrowed some of their ideas to piece and build my own work.  
+## 
 
 # Use PowerShell to Find Locked-Out User Accounts
 https://community.spiceworks.com/topic/2330840-powershell-script-to-alert-users-that-their-account-will-be-disabled 
@@ -32,3 +35,5 @@ https://stackoverflow.com/questions/8414370/go-to-next-item-in-foreach-object
 
 # In Powershell, how to set variable values within a function and have that value available in the parent scope?
 https://stackoverflow.com/questions/27847809/in-powershell-how-to-set-variable-values-within-a-function-and-have-that-value
+
+
