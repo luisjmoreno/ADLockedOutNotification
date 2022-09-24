@@ -14,7 +14,9 @@ No, they won't.  The script will skip existing locked-out users but will continu
 
 Additional technical information
 
-Mycred.xml file contains the encrypted credentials needed to authenticate to the smtp server.  The email function sends an HTML formatted email because it contains a table with the “Device name” and “Date and Time” of the locked-out event.  The email will be encrypted in transit by using the -UseSsl value.  The second email address is pulled from the Active Directory LDAP info value. This field contains an email in the form of name@domain.com.
+Mycred.xml file contains the encrypted credentials needed to authenticate to the smtp server.  To create this file, you can find the link to the website in the "Documentation-and-resources.txt" section.  The email function sends an HTML formatted email and contains a table with the “Device name” and “Date and Time” of the locked-out event.  The email will be encrypted in transit by using the -UseSsl value.  The second email address is pulled from the Active Directory LDAP info value. This field contains an email in the form of name@domain.com.  
+
+Throughout the script, I added sections to test certain actions if necessary.  These sections are commented and not required for the script, these are only for trobleshooting purposes. 
 
 Credits and references: 
 
