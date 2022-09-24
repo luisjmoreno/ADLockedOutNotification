@@ -1,0 +1,36 @@
+
+
+
+Use PowerShell to Find Locked-Out User Accounts
+https://community.spiceworks.com/topic/2330840-powershell-script-to-alert-users-that-their-account-will-be-disabled
+
+
+Use PowerShell to Find Locked-Out User Accounts
+https://devblogs.microsoft.com/scripting/use-powershell-to-find-locked-out-user-accounts/
+
+powershell Send-MailMessage -Credential syntax
+https://community.spiceworks.com/topic/2123933-powershell-send-mailmessage-credential-syntax
+
+How To Save and Read Sensitive Data with PowerShell
+https://mcpmag.com/articles/2017/07/20/save-and-read-sensitive-data-with-powershell.aspx
+
+Send Emails Using Send-MailMessage Cmdlet in PowerShell
+https://www.delftstack.com/howto/powershell/send-emails-using-powershell/
+
+How to: Run PowerShell Scripts from Task Scheduler
+https://community.spiceworks.com/how_to/17736-run-powershell-scripts-from-task-scheduler
+
+Sending email from Microsoft Windows PowerShell through SparkPost
+https://support.sparkpost.com/docs/integrations/ms-windows-powershell
+
+HTML Tables
+https://www.w3schools.com/html/html_tables.asp
+
+The Different Between Break, Return & Exit In PowerShell
+https://jorgecandeias.github.io/2014/11/27/the-difference-between-break-return-and-exit-in-powershell/
+
+Go to next item in ForEach-Object
+https://stackoverflow.com/questions/8414370/go-to-next-item-in-foreach-object
+
+In Powershell, how to set variable values within a function and have that value available in the parent scope?
+https://stackoverflow.com/questions/27847809/in-powershell-how-to-set-variable-values-within-a-function-and-have-that-value
