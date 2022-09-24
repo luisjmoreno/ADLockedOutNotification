@@ -1,6 +1,6 @@
 #
-# This is v4.3 of the script. This script will email users automatically when they are locked out from AD. 
-# The script will provide some clues for places where they got locked out. The script will send 3 email notifications to two email addresses. 
+# This script will email users automatically when they are locked out from Active Directory. 
+# The script will provide some clues for places where users got locked out. The script will send 3 email notifications to two different email addresses. 
 # 
 #
 Import-Module -Name ActiveDirectory
@@ -14,7 +14,7 @@ $creds = Import-CliXml -Path "C:\Scripts\Locked-out-notification\mycred.xml"
 # Search for users that have the AD Lock out status in the domain. 
 #
 $ADUserLock =
-search-adaccount -searchbase 'ou=, ou=, dc=, dc=, dc=' -LockedOut |
+search-adaccount -searchbase 'ou=someorganizational_unit, dc=domain, dc=com' -LockedOut |
 where-object {$_.Enabled -eq $True}
 #
 $ADUserLock | export-csv "C:\Scripts\Locked-out-notification\report.csv" -NoTypeInformation
@@ -98,9 +98,9 @@ $AccountInfo = Get-aduser $user.samaccountname -properties name,emailaddress,inf
 $message =
 @"
 Hello $($AccountInfo.name),<br><br>
-This is an automated message. Your <> (AD) account is currently locked out.  If this wasn't caused by you, please report this activity immediately to DoIT Help Desk.<br><br>
-To unlock your AD account, go to <link> self-service system.  <b>Please note:</b> this message will repeat automatically 3 times.  You won't be able to use any <> systems until you take some action.  If you changed your password  recently, please update your credentials across all your devices. <br><br>
-If you require further assistance, please contact <> Help Desk by email <> or by phone at <> .<br><br><br>
+This is an automated message. Your <> (AD) account is currently locked out.  If this wasn't caused by you, please report this activity immediately to Security Departmnet.<br><br>
+To unlock your AD account, go to <link> self-service system.  <b>Please note:</b> this message will repeat automatically 3 times.  You won't be able to use any <> systems until you take some action.  If you changed your password recently, please update your credentials across all your devices. <br><br>
+If you require further assistance, please contact <Help Desk> by email <> or by phone at <> .<br><br><br>
 
 Lock out locations are listed below.<br> 
 <table>
@@ -127,17 +127,17 @@ Lock out locations are listed below.<br>
 </table>
 
 <br><br>
-DoIT<br>
-My school<br>
+Department of Information Technology.<br>
+My company name<br>
 Address<br>
-New York, NY, 10023<br>
+City, State, Zip Code<br>
 "@
 
     $mailpr = @{
         from       = "noreply@something.edu"
         to         = $AccountInfo.EmailAddress
         cc         = $AccountInfo.info
-        subject    = "Your My Scohol Active Directory account is locked out. "
+        subject    = "Your Active Directory account is locked out. "
         body       = $message 
         bodyashtml = $true
         smtpserver = 'smtp.something.edu'
@@ -149,3 +149,4 @@ New York, NY, 10023<br>
 }
 
 exit
+#
