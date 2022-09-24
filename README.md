@@ -1,6 +1,6 @@
 # ADLockedOutNotification
 
-This PowerShell script will detect and notify Active Directory users when they get locked-out.  Locked-out Active Directory users will be notified by email using their Active Directory email address and a second email address (info Active Directory field, more on this below).   
+The PowerShell script ADduserlockedout.ps1 will detect and notify Active Directory users when they get locked-out.  Locked-out Active Directory users will be notified by email using their Active Directory email address and a second email address (info Active Directory field, more on this below).   
 
 How the PowerShell script works?
 
@@ -14,13 +14,13 @@ No, they won't.  The script will skip existing locked-out users but will continu
 
 Additional technical information
 
-Mycred.xml file contains the encrypted credentials needed to authenticate to the smtp server.  To create this file, you can find the link to the website in the "Documentation-and-resources.txt" section.  The email function sends an HTML formatted email and contains a table with the “Device name” and “Date and Time” of the locked-out event.  The email will be encrypted in transit by using the -UseSsl value.  The second email address is pulled from the Active Directory LDAP info value. This field contains an email in the form of name@domain.com.  
+Mycred.xml file contains the encrypted credentials needed to authenticate to the smtp server.  To create this file, you can find the link to the website in the "Documentation-and-resources.txt" section.  The email function sends an HTML formatted email and contains a table with the “Device name” and “Date and Time” of the locked-out event.  The email will be encrypted in transit by using the -UseSsl value.  The second email address is pulled from the Active Directory LDAP info value. This field contains an email in the form of name(at)domain.com.  
 
 Throughout the script, I added sections to test certain actions if necessary.  These sections are commented and not required for the script, these are only for trobleshooting purposes. 
 
 Credits and references: 
 
-This file "Documentation-and-resources.txt" includes several links to the work of others.  I borrowed some of their ideas to piece and build my own work, I hope you find it useful.  I think is fare to also share this work so it can help someone else.  Feel free to modify this script for to fit your own needs.
+This file "Documentation-and-resources.txt" includes several links to the work of others.  I borrowed some of their ideas to piece and build my own work, I hope you find this script useful.  I think is fare to also share this work so it can help someone else.  Feel free to modify this script for to fit your own needs.  Finally, this my first time posting something in GitHub. 
 
 Disclaimer:  
 
