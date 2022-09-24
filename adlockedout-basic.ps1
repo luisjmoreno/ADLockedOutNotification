@@ -1,5 +1,7 @@
-
-### Can't find where I found this code. But this was the original idea. 
+##
+##
+## Credits:  This belongs to someone else, I can't find the source where I found this code.  If you know, let me know.  The script below guide me to build my own script. 
+##
 
 $Usr = Read-Host -Prompt "Please enter a user name"
 
